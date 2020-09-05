@@ -1,13 +1,12 @@
-package me.lishuo.controller;
+package ink.zfei.gen.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import me.lishuo.service.GenService;
+import ink.zfei.gen.MetaData;
+import ink.zfei.gen.service.GenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by lis on 17/5/11.
@@ -26,18 +25,10 @@ public class IndexController {
 
     @RequestMapping("/gen")
     @ResponseBody
-    public String generator(HttpServletRequest request) {
-
-        String path = request.getContextPath();
-        String basePath = request.getScheme() + "://"
-                + request.getServerName() + ":" + request.getServerPort()
-                + path + "/";
+    public String generator(MetaData metaData) {
 
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("code", genService.genCode(request));
-        jsonObject.put("basepath", basePath);
-
-
+        jsonObject.put("code", genService.genCode(metaData));
         return jsonObject.toJSONString();
     }
 

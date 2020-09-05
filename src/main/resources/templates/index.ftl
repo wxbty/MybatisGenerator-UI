@@ -89,7 +89,7 @@
             <div class="box-header with-border">
               <h3 class="box-title">Quick Generator</h3>
             <!-- form start -->
-            <form role="form" id="mbg">
+            <form role="form" id="mbg1">
             
                 <div class="form-group">
                   <div class="col-md-12" >
@@ -119,6 +119,18 @@
                     <div class="col-md-6" >
                       <label>密码</label>
                       <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="column">
+                    <div class="col-md-6" >
+                      <label>工程</label>
+                      <input type="text" class="form-control" id="project" name="project" placeholder="Enter project">
+                    </div>
+                    <div class="col-md-6" >
+                      <label>模块</label>
+                      <input type="text" class="form-control" id="module" name="module" placeholder="Enter module">
                     </div>
                   </div>
                 </div>
@@ -218,6 +230,6 @@
 <!-- AdminLTE App -->
 <script src="js/app.min.js"></script>
 
-<script src="js/biz.js"></script>
+<script src="js/biz.js?ver=1"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package me.lishuo;
+package ink.zfei.gen;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

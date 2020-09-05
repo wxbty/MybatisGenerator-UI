@@ -49,10 +49,10 @@ function gen() {
         url: '/gen',
         dataType: 'json',
         timeout: 3000, //超时时间设置，单位毫秒
-        data: $('#mbg').serialize(),
+        data: $('#mbg1').serialize(),
         success: function (data) {
             if (data.code == "00") {
-                window.open('result/mbg.zip')
+                alert("创建成功! ");
             } else if (data.code == "01") {
                 alert("01: 数据库连接异常! ");
             }
@@ -65,7 +65,7 @@ function gen() {
 }
 
 function saveConf() {
-    var data = JSON.stringify($('#mbg').serialize());
+    var data = JSON.stringify($('#mbg1').serialize());
     var key = $('#confname').val();
 
     localStorage.setItem(key, data);

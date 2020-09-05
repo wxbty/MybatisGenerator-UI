@@ -43,7 +43,7 @@ cd target/
 nohup java -server -Xms128m -Xmx128m -jar MybatisGenerator-1.0.0-SNAPSHOT.jar  >out.log 2>&1 &
 ```
 
-* you can also run it in Eclipes or IntelliJ IDEA. Just find class `me.lishuo.MybatisGeneratorApplication` and run it.
+* you can also run it in Eclipes or IntelliJ IDEA. Just find class `MybatisGeneratorApplication` and run it.
 
 *  Access server  as `http://localhost:8888`
 
