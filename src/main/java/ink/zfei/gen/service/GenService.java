@@ -43,7 +43,7 @@ public class GenService {
             // db
             JDBCConnectionConfiguration jdbcConnectionConfiguration = context.getJdbcConnectionConfiguration();
             String connection = "jdbc:mysql://" + metaData.getIp() + ":" + metaData.getPort() + "/" + metaData.getDb();
-            jdbcConnectionConfiguration.setConnectionURL(connection);
+            jdbcConnectionConfiguration.setConnectionURL(connection+"?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&enabledTLSProtocols=TLSv1.2");
             jdbcConnectionConfiguration.setUserId(metaData.getUsername());
             jdbcConnectionConfiguration.setPassword(metaData.getPassword());
             // model 配置

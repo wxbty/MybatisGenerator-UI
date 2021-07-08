@@ -39,7 +39,7 @@ function gen() {
     $('input').each(function (i) {
         var text = $(this).val();
         if (text == "") {
-            alert("信息输入不全");
+            // alert("信息输入不全");
             return false;
         }
     });

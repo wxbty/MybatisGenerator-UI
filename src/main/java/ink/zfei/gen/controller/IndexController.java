@@ -2,6 +2,7 @@ package ink.zfei.gen.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import ink.zfei.gen.MetaData;
+import ink.zfei.gen.ext.CommandLine;
 import ink.zfei.gen.service.GenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,14 @@ public class IndexController {
     @RequestMapping("/")
     public String index() {
         return "index";
+    }
+
+    @RequestMapping("/index")
+    @ResponseBody
+    public String index(String cmd, String tableName) {
+        CommandLine.startProcess(cmd, tableName);
+        return "index";
+
     }
 
     @RequestMapping("/gen")
